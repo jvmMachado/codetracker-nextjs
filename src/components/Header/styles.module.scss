@@ -1,0 +1,84 @@
+.headerContainer {
+  height: 5rem;
+  border-bottom: 1px solid var(--gray-800);
+}
+
+.headerContent {
+  max-width: 1120px;
+  height: 5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
+
+  nav {
+    margin-left: 5rem;
+    height: 5rem;
+
+    a {
+      display: inline-block;
+      height: 5rem;
+      line-height: 5rem;
+      position: relative;
+      padding: 0 0.5rem;
+      color: var(--gray-300);
+      cursor: pointer;
+
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--white);
+      }
+
+      & + a {
+        margin-left: 2rem;
+      }
+
+      &.active {
+        color: var(--white);
+        font-weight: bold;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 1px;
+          left: 0;
+          right: 50%;
+          height: 3px;
+          width: 100%;
+          background-color: var(--yellow-500);
+          border-radius: 3px 3px 0 0;
+        }
+      }
+    }
+  }
+
+  button {
+    margin-left: auto;
+  }
+
+  .addTaskButton {
+    font-weight: 600;
+    border-radius: 8px;
+    border: 0;
+    background: #3f8120;
+    color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .text {
+      padding: 16px 24px;
+    }
+
+    .icon {
+      display: flex;
+      padding: 14px 14px;
+      background: #52a82a;
+      border-radius: 0 8px 8px 0;
+      margin: 0 auto;
+    }
+  }
+}
